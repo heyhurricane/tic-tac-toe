@@ -1,0 +1,21 @@
+.square {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+}
+
+.btn {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.btn-x {
+  background: url(img/x.png) no-repeat center / cover;
+}
+
+.btn-o {
+  background: url(img/o.png) no-repeat center / cover;
+}
