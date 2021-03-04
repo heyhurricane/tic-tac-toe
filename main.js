@@ -3,10 +3,11 @@ let isCross = true;
 let count = 0;
 const winSteps = [
   [1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9], [1, 5, 9], [3, 5, 7]
-];
+]; // все выигрышные комбинации
 
 let endOfGame = false;
 
+// перезапуск игры
 const reload = () => {
   const all = square.querySelectorAll('.btn');
   all.forEach((item) => {
@@ -18,6 +19,7 @@ const reload = () => {
   });
 }
 
+// проверка окончания игры
 const isEnd = (player) => {
   let allSteps = [];
   let winner;
@@ -40,7 +42,7 @@ const isEnd = (player) => {
     }
   } 
   if (allSteps.length > 2) {
-    for (let k = 0; k < winSteps.length; k++) {
+    for (let k = 0; k < winSteps.length; k++) { // сравнение всех ходов текущего игрока с выигрышными комбинациями
       let countWinStep = 0;
       for (let i = 0; i < allSteps.length; i++) {
         for (let j = 0; j < winSteps[k].length; j++) {
